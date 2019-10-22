@@ -1,0 +1,35 @@
+body {
+    margin: 10;
+    background: rgb(89, 218, 96);
+}
+
+#canvas {
+    margin: auto;
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    box-shadow: 10px 20px 50px #383838;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color: #383838;
+}
+
+.nav .nav__title {
+    color: #FFF;
+}
+
+.nav .nav__items{
+    display: flex;
+    list-style: none;
+}
+
+.nav .nav__items .nav__item {
+
+    margin: 0 5px 0 5px;
+
+}

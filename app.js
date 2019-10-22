@@ -1,20 +1,17 @@
-const express = require('express'),
-      path = require('path')
-     
-const post = process.env.PORT || 3000;
+const express = require('express')
+const path = require('path')
+const indexRouters = require('./routes/index')
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'juego')));
-
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: false }));
 app.set ('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 
-app.get('/', (req,res)=>{
-    res.render('index')
-})
+app.use('/', indexRouters)
 
+app.use('*', (req, res) => res.render('404'))
 
-app.listen(post, ()=>{console.log(`Escuchando en el puerto:${post}`)})
+app.listen(port, () => console.log(`Escuchando en el puerto:${port}`))

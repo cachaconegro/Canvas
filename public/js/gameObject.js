@@ -1,4 +1,4 @@
-import Renderable from './renderable.js'
+import Renderable from './renderable.js.js'
 
 export default class GameObject {
     constructor() {

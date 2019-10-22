@@ -1,4 +1,4 @@
-import GameObject from './gameObject.js'
+import GameObject from './gameObject.js.js'
 
 export default class Engine {
     constructor() {
